@@ -1,3 +1,4 @@
+    // 372 ms, 58 MB
     public class Trie {
         private HashSet<string> StoredWords;
         private int MaxLength;
