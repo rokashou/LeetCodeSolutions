@@ -1,3 +1,18 @@
+/*
+    Runtime: 84 ms, faster than 94.39% of C# online submissions for Flatten a Multilevel Doubly Linked List.
+    Memory Usage: 37.9 MB, less than 14.80% of C# online submissions for Flatten a Multilevel Doubly Linked List.
+ */
+
+/*
+// Definition for a Node.
+public class Node {
+    public int val;
+    public Node prev;
+    public Node next;
+    public Node child;
+}
+*/
+
 public class Solution {
     public Node Flatten(Node head)
     {
