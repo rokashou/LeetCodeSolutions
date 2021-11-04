@@ -13,6 +13,10 @@
  */
 public class Solution {
     public int SumOfLeftLeaves(TreeNode root) {
+        /*
+         Runtime: 84 ms, faster than 88.72% of C# online submissions for Sum of Left Leaves.
+         Memory Usage: 37.8 MB, less than 10.90% of C# online submissions for Sum of Left Leaves.
+        */
         if(root == null) return 0;
         Queue<TreeNode> queue = new Queue<TreeNode>();
 
