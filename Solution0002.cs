@@ -1,4 +1,10 @@
 /**
+ Uploaded: 10/03/2021 16:14
+ Runtime: 100 ms, 74.10%
+ Memory Usage: 28.3 MB, 79.99%
+ */
+
+/**
  * Definition for singly-linked list.
  * public class ListNode {
  *     public int val;
