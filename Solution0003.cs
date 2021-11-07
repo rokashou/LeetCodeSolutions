@@ -1,3 +1,10 @@
+/**
+ Uploaded: 10/03/2021 19:39
+ Runtime: 84 ms, 74.18%
+ Memory Usage: 26.3 MB, 78.73%
+ */
+
+public class Solution {
     public int LengthOfLongestSubstring(string s) {
         if (s.Length == 0) return 0;
         int index = 0;
@@ -30,4 +37,4 @@
 
         return maxCount;
     }
-    
+}    
