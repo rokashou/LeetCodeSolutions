@@ -2,6 +2,7 @@ public class Solution {
     // Runtime: 2656 ms, faster than 33.33% of C# online submissions for Longest Duplicate Substring.
     // Memory Usage: 40.8 MB, less than 100.00% of C# online submissions for Longest Duplicate Substring.
     // Updated: 2021-10-30
+    // Uploaded: 10/30/2021 20:54
     
     public string LongestDupSubstring(string s)
     {
