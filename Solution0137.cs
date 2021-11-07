@@ -2,6 +2,7 @@ public class Solution {
 /*
 Runtime: 148 ms, faster than 25.67% of C# online submissions for Single Number II.
 Memory Usage: 39.7 MB, less than 8.11% of C# online submissions for Single Number II.
+Uploaded: 11/06/2021 21:51
 */
     public int SingleNumber(int[] nums) {
         int[,] list = new int[10000,2];
