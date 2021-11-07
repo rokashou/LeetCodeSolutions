@@ -1,5 +1,6 @@
 public class Solution {
     /*
+    Uploaded: 11/07/2021 13:08
     Runtime: 166 ms, faster than 22.36% of C# online submissions for Multiply Strings.
     Memory Usage: 36.4 MB, less than 39.14% of C# online submissions for Multiply Strings.
     */
