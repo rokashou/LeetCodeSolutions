@@ -1,3 +1,9 @@
+/*
+Uploaded: 10/04/2021 20:12
+Runtime: 972 ms, 14.71% faster
+Memory Usage: 26.9 MB, 72.16% less
+*/
+
 public class Solution {
     public string LongestPalindrome(string s)
     {
