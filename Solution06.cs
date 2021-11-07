@@ -1,3 +1,9 @@
+/*
+Uploaded: 10/04/2021 22:16
+Runtime: 173 ms, 17.31% faster
+Memory Usage: 26.7 MB, 97.12 less
+*/
+
 public class Solution {
     public string Convert(string s, int numRows) {
         if(numRows == 1) return s;
