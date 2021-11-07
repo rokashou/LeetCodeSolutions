@@ -1,3 +1,10 @@
+/*
+Runtime: 171 ms, 54.18%
+Memory Usage: 45.3 MB, 70.25%
+Uploaded: 10/25/2021 23:28
+*/
+
+
 public class MinStack {
         List<int> stack;
         int min;
