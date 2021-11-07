@@ -1,3 +1,9 @@
+/*
+Uploaded: 10/03/2021 15:21
+Runtime: 164 ms, 88.24%
+Memory Usage: 40.2 MB, 67.01%
+*/
+
 public class Solution {
     public bool CanJump(int[] nums)
     {
