@@ -1,3 +1,9 @@
+/*
+Uploaded: 10/13/2021 21:58
+Runtime: 80 ms, 94.40%
+Memory Usage: 36.3 MB, 66.72%
+*/
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
