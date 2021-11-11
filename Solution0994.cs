@@ -1,5 +1,6 @@
 public class Solution {
     /*
+    Uploaded: 10/29/2021 20:12
     Runtime: 88 ms, faster than 91.75% of C# online submissions for Rotting Oranges.
     Memory Usage: 39.1 MB, less than 7.24% of C# online submissions for Rotting Oranges.
     */
