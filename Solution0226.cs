@@ -12,6 +12,12 @@
  * }
  */
 public class Solution {
+    /*
+    Uploaded: 10/27/2021 00:01
+    Runtime: 92 ms, 50.17%
+    Memory Usage: 37.3 MB, 41.68%
+    */
+    
     public TreeNode InvertTree(TreeNode root)
     {
         if (root == null) return null;
