@@ -1,3 +1,9 @@
+/*
+Uploaded: 10/06/2021 20:11
+Runtime: 180 ms, 91.28% better
+Memory Usage: 48.3 MB, 46.62% better
+*/
+
 public class Solution {
     public IList<int> FindDisappearedNumbers(int[] nums) {
         List<int> result=new List<int>();
