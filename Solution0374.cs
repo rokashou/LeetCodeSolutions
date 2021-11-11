@@ -1,3 +1,9 @@
+/*
+Uploaded: 10/12/2021 21:50
+Runtime: 32 ms, 89.25%
+Memory Usage: 26.8 MB, 100% large
+*/
+
 /** 
  * Forward declaration of guess API.
  * @param  num   your guess
