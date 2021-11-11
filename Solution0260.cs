@@ -1,5 +1,6 @@
 public class Solution {
     /*
+    Uploaded: 11/06/2021 22:05
     Runtime: 164 ms, faster than 77.14% of C# online submissions for Single Number III.
     Memory Usage: 43.4 MB, less than 7.62% of C# online submissions for Single Number III.
     */
