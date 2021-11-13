@@ -1,5 +1,20 @@
 public class Solution {
-    public int[] DailyTemperatures(int[] temperatures) {
+    public int[] DailyTemperatures_BF(int[] temperatures) {
+        /* TLE */
+        int[] answer = new int[temperatures.Length];
+        for(int idx1 = 1; idx1<temperatures.Length; idx1++){
+            for(int idx2=0;idx2<idx1;idx2++){
+                if(answer[idx2]>0) continue;
+
+                if(temperatures[idx2]<temperatures[idx1]){
+                    answer[idx2] = idx1 - idx2;
+                }
+            }
+        }
+        return answer;
+    }
+    
+    public int[] DailyTemperatures_MonotonicStack(int[] temperatures) {
         // Official Solution Approach 1: With MonotonicStack
         /*
         Uploaded: 11/13/2021 19:47
@@ -23,4 +38,34 @@ public class Solution {
 
         return answer;
     }
+
+    public int[] DailyTemperatures_OptimizedSpaceArray(int[] temperatures) {
+        // Official Solution Approach 2: Array, Optimized Space
+        /*
+        Uploaded: 11/13/2021 20:08
+        Runtime: 292 ms, faster than 95.31% of C# online submissions for Daily Temperatures.
+        Memory Usage: 49.1 MB, less than 52.50% of C# online submissions for Daily Temperatures.
+        */
+        int[] answer = new int[temperatures.Length];
+        int n = temperatures.Length;
+        int hottest = 0;
+
+        for(int currDay = n-1; currDay >= 0; currDay--){
+            int currentTemp = temperatures[currDay];
+            if(hottest <= currentTemp) {
+                hottest = currentTemp;
+                continue;
+            }
+
+            int days = 1;
+            while(temperatures[currDay + days] <= temperatures[currDay]){
+                // Use information from answer to search for the next warmer day
+                days += answer[currDay + days];
+            }
+            answer[currDay] = days;
+        }
+
+        return answer;
+    }
+
 }
