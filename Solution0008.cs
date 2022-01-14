@@ -2,11 +2,17 @@
 Uploaded: 10/05/2021 00:30
 Runtime: 140 ms, 7.73%
 Memory Usage: 27 MB, 47.38%
+
+Uploaded: 01/14/2022 20:39
+
+Runtime: 122 ms, faster than 14.05% of C# online submissions for String to Integer (atoi).
+Memory Usage: 36.5 MB, less than 68.19% of C# online submissions for String to Integer (atoi).
 */
 
 public class Solution {
     public int MyAtoi(string s) {
-        if(s.Length == 0) return 0;
+        s=s.Trim();
+        if (string.IsNullOrEmpty(s)) return 0;
         bool negative = false;
         string result=string.Empty;
         string Maximum = Int32.MaxValue.ToString();
