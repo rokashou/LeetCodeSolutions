@@ -55,3 +55,22 @@ public class Solution {
         return true;
     }
 }
+
+
+public class Solution520_2
+{
+    /*
+    Uploaded: 01/25/2022 07:47
+    Runtime: 147 ms, faster than 5.26% of C# online submissions for Detect Capital.
+    Memory Usage: 36.4 MB, less than 88.42% of C# online submissions for Detect Capital.
+    */
+    public bool DetectCapitalUse(string word)
+    {
+        string tmp = word.ToUpper();
+        if(tmp == word) return true;
+        tmp = char.ToUpper(word[0]) + word.Substring(1).ToLower();
+        if(tmp == word) return true;
+        return false;
+    }
+}
+
