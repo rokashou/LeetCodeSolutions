@@ -1,4 +1,41 @@
 /*
+Second Try
+Runtime: 168 ms, faster than 94.47% of C# online submissions for Container With Most Water.
+Memory Usage: 47.7 MB, less than 13.16% of C# online submissions for Container With Most Water.
+Uploaded: 04/12/2022 23:42
+*/
+public class Solution {
+    public int MaxArea(int[] height)
+    {
+        int lp = 0;
+        int rp = height.Length - 1;
+        int result = 0;
+
+        while (lp < rp)
+        {
+            result = Math.Max(result,
+                Math.Min(height[lp],height[rp]) * (rp-lp)
+                );
+
+
+            if(Math.Min(height[lp],height[rp]) == height[lp]) {
+                lp++;
+            } else {
+                rp--;
+            }
+        }
+
+        return result;
+    }
+}
+
+
+
+
+
+
+
+/*
 Runtime: 270 ms, faster than 41.14% of C# online submissions for Container With Most Water.
 Memory Usage: 45 MB, less than 79.27% of C# online submissions for Container With Most Water.
 Uploaded: 04/12/2022 23:34
