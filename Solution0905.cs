@@ -1,7 +1,7 @@
 /*
-Runtime: 299 ms, faster than 5.11% of C# online submissions for Sort Array By Parity.
-Memory Usage: 45.3 MB, less than 45.28% of C# online submissions for Sort Array By Parity.
-Uploaded: 05/02/2022 10:37
+Runtime: 148 ms, faster than 82.68% of C# online submissions for Sort Array By Parity.
+Memory Usage: 46.4 MB, less than 13.78% of C# online submissions for Sort Array By Parity.
+Uploaded: 05/02/2022 10:53
 */
 
 public class Solution {
@@ -19,6 +19,8 @@ public class Solution {
                 swap = nums[l];
                 nums[l] = nums[r];
                 nums[r] = swap;
+                l++;
+                r--;
             }
         }
         return nums;
