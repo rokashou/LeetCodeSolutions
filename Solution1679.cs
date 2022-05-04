@@ -1,27 +1,27 @@
 /*
-Runtime: 219 ms, faster than 87.10% of C# online submissions for Max Number of K-Sum Pairs.
-Memory Usage: 50.2 MB, less than 19.35% of C# online submissions for Max Number of K-Sum Pairs.
-Uploaded: 05/04/2022 21:20
+Runtime: 218 ms, faster than 87.10% of C# online submissions for Max Number of K-Sum Pairs.
+Memory Usage: 51.6 MB, less than 6.45% of C# online submissions for Max Number of K-Sum Pairs.
+Uploaded: 05/04/2022 21:24
 
 By HashMap
 */
 public class Solution {
     public int MaxOperations(int[] nums, int k) {
-        Dictionary<int, List<int>> table = new Dictionary<int, List<int>>();
+        Dictionary<int, int> table = new Dictionary<int, int>();
         int sum = 0;
         foreach(var n in nums)
         {
             if (n >= k) continue;
-            if (table.ContainsKey(k - n) && table[k-n].Count > 0)
+            if (table.ContainsKey(k - n) && table[k-n] > 0)
             {
                 sum++;
-                table[k - n].RemoveAt(0);
+                table[k - n]--;
             }
             else
             {
                 if (!table.ContainsKey(n))
-                    table.Add(n, new List<int>());
-                table[n].Add(n);
+                    table.Add(n, 0);
+                table[n]++;
             }
         }
         return sum;
