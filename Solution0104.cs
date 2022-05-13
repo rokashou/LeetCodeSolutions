@@ -1,4 +1,21 @@
 /*
+Runtime: 102 ms, faster than 66.41% of C# online submissions for Maximum Depth of Binary Tree.
+Memory Usage: 37.9 MB, less than 79.62% of C# online submissions for Maximum Depth of Binary Tree.
+Uploaded: 05/13/2022 21:09	
+*/
+
+public class Solution {
+    public int MaxDepth(TreeNode root) {
+        if (root == null) return 0;
+        return 1 + Math.Max(MaxDepth(root.right), MaxDepth(root.left));
+    }
+}
+
+
+
+
+
+/*
 Runtime: 146 ms, faster than 18.04% of C# online submissions for Maximum Depth of Binary Tree.
 Memory Usage: 38.2 MB, less than 43.32% of C# online submissions for Maximum Depth of Binary Tree.
 Uploaded: 05/13/2022 21:07	
