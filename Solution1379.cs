@@ -1,4 +1,24 @@
 /*
+Runtime: 327 ms, faster than 83.61% of C# online submissions for Find a Corresponding Node of a Binary Tree in a Clone of That Tree.
+Memory Usage: 47.9 MB, less than 96.72% of C# online submissions for Find a Corresponding Node of a Binary Tree in a Clone of That Tree.
+Uploaded: 05/17/2022 21:28
+*/
+public class Solution {
+    public TreeNode GetTargetCopy(TreeNode original, TreeNode cloned, TreeNode target) {
+        if (object.ReferenceEquals(original, target)) return cloned;
+
+        TreeNode lresult = null;
+        TreeNode rresult = null;
+        if (original.left != null) lresult = GetTargetCopy(original.left, cloned.left, target);
+        if (original.right != null) rresult = GetTargetCopy(original.right, cloned.right, target);
+        return lresult ?? rresult;
+    }
+}
+
+
+
+
+/*
 Runtime: 461 ms, faster than 34.43% of C# online submissions for Find a Corresponding Node of a Binary Tree in a Clone of That Tree.
 Memory Usage: 48 MB, less than 96.72% of C# online submissions for Find a Corresponding Node of a Binary Tree in a Clone of That Tree.
 Uploaded: 05/17/2022 21:21
