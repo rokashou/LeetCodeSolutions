@@ -1,3 +1,42 @@
+// Best Solution
+
+/*
+Runtime: 70 ms, faster than 83.33% of C# online submissions for Concatenation of Consecutive Binary Numbers.
+Memory Usage: 25.2 MB, less than 66.67% of C# online submissions for Concatenation of Consecutive Binary Numbers.
+Uploaded: 09/23/2022 18:03	
+*/
+
+public class Solution {
+    public int ConcatenatedBinary(int n)
+    {
+        int mod = 1_000_000_007;
+        int len = 0;
+        long ans = 0;
+
+        for (int i = 1; i <= n; i++)
+        {
+            if ((i & (i - 1)) == 0)
+                len++;
+
+            ans = ((ans << len) | i) % mod;
+        }
+
+        return (int) ans;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// My Solution
+
 /*
 Runtime: 601 ms, faster than 50.00% of C# online submissions for Concatenation of Consecutive Binary Numbers.
 Memory Usage: 26.5 MB, less than 50.00% of C# online submissions for Concatenation of Consecutive Binary Numbers.
