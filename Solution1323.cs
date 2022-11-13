@@ -1,6 +1,7 @@
 /*
 Runtime: 30 ms, faster than 81.32% of C# online submissions for Maximum 69 Number.
 Memory Usage: 25.1 MB, less than 84.71% of C# online submissions for Maximum 69 Number.
+Uploaded: 11/13/2022 08:14
 */
 
 public class Solution {
