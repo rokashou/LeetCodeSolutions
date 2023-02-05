@@ -1,4 +1,50 @@
 /*
+Sliding Window
+Runtime 80 ms, Beats 85.85%
+Memory 39.9 MB, Beats 41.91%
+Accept Feb 06, 2023 01:07
+*/
+
+public class Solution {
+    public bool CheckInclusion(string s1, string s2)
+    {
+        if(s1.Length > s2.Length) return false;
+
+        int[] freq = new int[26];
+        int[] window = new int[26];
+
+
+        // first window
+        for(int i = 0; i < s1.Length; i++)
+        {
+            freq[s1[i]-'a']++;
+            window[s2[i]-'a']++;
+        }
+
+        if (CheckArrayEquals(freq, window)) return true;
+        for(int i = s1.Length; i < s2.Length; i++) {
+            window[s2[i - s1.Length] - 'a']--;
+            window[s2[i] - 'a']++;
+
+            if (CheckArrayEquals(freq, window)) return true;
+        }
+
+        return false;
+    }
+
+    private bool CheckArrayEquals(int[] a, int[] b)
+    {
+        for (int i = 0; i < a.Length; i++)
+        {
+            if (a[i] != b[i]) return false;
+        }
+        return true;
+    }
+}
+
+
+
+/*
 Runtime 2406 ms, Beats 5.15%
 Memory 51.3 MB, Beats 7.17%
 Feb 06, 2023 00:17
