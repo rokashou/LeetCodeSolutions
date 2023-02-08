@@ -26,3 +26,34 @@ public class Solution {
 
     }
 }
+
+
+/*
+Best Time Solution
+Greedy
+*/
+
+public class Solution {
+    public int Jump(int[] nums) {
+        int current = 0; // current farthest step
+        int farthest = 0; // the farthest step form i
+        int jump = 0; // count for jump
+
+        for (int i = 0; i < nums.Length - 1; i++)
+        {
+            // the farthest i from index i
+            farthest = Math.Max(farthest, nums[i] + i);
+
+            // when reach the current farthest point
+            if (i == current)
+            {
+                // reset the farthest step
+                current = farthest;
+                // add jump count
+                jump++;
+            }
+        }
+        return jump;
+    }
+}
+
