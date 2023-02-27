@@ -1,4 +1,10 @@
 /*
+Feb 27, 2023 22:36
+Runtime 91 ms, Beats 80.77%
+Memory 43.7 MB, Beats 11.54%
+*/
+
+/*
 // Definition for a QuadTree node.
 public class Node {
     public bool val;
