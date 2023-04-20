@@ -29,18 +29,4 @@ public class Solution {
             }
         }
     }
-
-    private void SetRowZeroes(int[][] matrix, int rowIndex, int columnLength)
-    {
-        for(int i = 0; i < columnLength; i++) {
-            matrix[rowIndex][i] = 0;
-        }
-    }
-
-    private void SetColumnZeroes(int[][] matrix, int columnIndex, int rowLength)
-    {
-        for(int i = 0; i < rowLength; i++) {
-            matrix[i][columnIndex] = 0;
-        }
-    }
 }
