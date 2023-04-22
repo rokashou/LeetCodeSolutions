@@ -1,4 +1,38 @@
 /*
+Apr 22, 2023 11:25
+Runtime 62 ms Beats 100%
+Memory 36.1 MB Beats 100%
+*/
+
+public class Solution {
+    public int MinInsertions(string s) {
+        int n = s.Length;
+
+        var sReverse = s.ToCharArray();
+        Array.Reverse(sReverse);
+
+        var dp = new int[n];
+        var dpPrev = new int[n];
+
+        for (var i = n - 1; i >= 0; --i)
+        {
+            dp[i] = 1;
+            for (var j = i + 1; j < n; ++j)
+            {
+                if (s[i] == s[j])
+                    dp[j] = dpPrev[j - 1] + 2;
+                else
+                    dp[j] = Math.Max(dpPrev[j], dp[j - 1]);
+            }
+            dp.CopyTo(dpPrev, 0);
+        }
+
+        return n - dp[n - 1];
+    }
+}
+
+
+/*
 Apr 22, 2023 10:59
 Runtime 88 ms Beats 64.52%
 Memory 36 MB Beats 100%
