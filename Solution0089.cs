@@ -1,25 +1,20 @@
 /*
 May 10, 2023 23:30
-Runtime 105 ms Beats 59.62%
-Memory 47.2 MB Beats 65.38%
+Runtime 98 ms Beats 84.62%
+Memory 46.8 MB Beats 84.62%
 */
 
-public class Solution {
-    public IList<int> GrayCode(int n) {
-        List<int> ans = new List<int>();
-        ans.Add(0);
-
-        for(int i = 0; i < n; i++)
+public class Solution 
+{
+    public IList<int> GrayCode(int n) 
+    {
+        var res = new List<int> { 0 };
+        for (int i = 0; i < n; i++) 
         {
-            int size = ans.Count;
-            while (size > 0)
-            {
-                size--;
-                int curNum = ans[size];
-                curNum += (1 << i);
-                ans.Add(curNum);
-            }
+            int size = res.Count;
+            for (int k = size - 1; k >= 0; k--) 
+                res.Add(res[k] | 1 << i);
         }
-        return ans;        
+        return res;
     }
 }
