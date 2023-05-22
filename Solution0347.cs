@@ -1,3 +1,55 @@
+/*
+Revised May 22, 2023 21:17
+Runtime 146 ms Beats 94.73%
+Memory 46.3 MB Beats 32.98%
+Change the foreach-loop to for-loop
+*/
+
+public class SolutionV2
+{
+    public int[] TopKFrequent(int[] nums, int k)
+    {
+        // O(1) time
+        if(k==nums.Length){
+            return nums;
+        }
+
+        // 1. build hash map: character and how often it appears
+        // O(N) time
+        Dictionary<int, int> count = new Dictionary<int, int>();
+        for (int i = 0; i < nums.Length; i++)
+        {
+            int n = nums[i];
+            int va = count.GetValueOrDefault(n, 0);
+            if(count.ContainsKey(n)){
+                count[n] = va + 1;
+            }else{
+                count.Add(n, 1);
+            }
+        }
+
+        // init heap 'the less frequent element first'
+        PriorityQueue<int, int> heap = new PriorityQueue<int, int>();
+        foreach(var key in count.Keys){
+            heap.Enqueue(key, count[key]);
+            // 2.keep k top frequent elements in the heap
+            // O(N log k) < O(N log N) time
+            if(heap.Count > k) heap.Dequeue();
+        }
+
+        // 3.build an output array
+        // O(k log k) time
+        int[] top = new int[k];
+        for (int i = k - 1; i >= 0;i--){
+            top[i] = heap.Dequeue();
+        }
+
+        return top;
+    }
+}
+
+
+
 // Solution with HEAP and PriorityQueue, where the PriorityQuere is new feature in net 6(C# 11)
 /*
 Runtime: 181 ms, faster than 74.85% of C# online submissions for Top K Frequent Elements.
