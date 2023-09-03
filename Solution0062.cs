@@ -1,4 +1,25 @@
 /*
+Sep 03, 2023 16:21
+Runtime 27 ms Beats 31.1%
+Memory 27 MB Beats 29.21%
+*/
+public class Solution {
+    public int UniquePaths(int m, int n) {
+        int N = m + n - 2;
+        int k = m - 1;
+        
+        double result = 1;
+        for(int i = 1; i <= k; i++)
+        {
+            result = result * (N - k + i)/i;
+        }
+        return (int)result;
+    }
+}
+
+
+
+/*
 
 https://leetcode.com/problems/unique-paths/
 
