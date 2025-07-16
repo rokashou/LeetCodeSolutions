@@ -1,3 +1,10 @@
+/*
+Runtime 0ms, Beats 100.00%
+Memory 2.14MB, Beats 42.86%
+submitted at Jul 16, 2025 22:36
+*/
+
+
 impl Solution {
     pub fn is_valid(word: String) -> bool {
         if word.len() < 3 {
