@@ -1,8 +1,4 @@
-/*
-Dec 02, 2024 17:26
-Runtime 0ms, Beats 100.00%
-Memory 2.23MB, Beats 29.41%
-*/
+struct Solution;
 
 impl Solution {
     pub fn is_prefix_of_word(sentence: String, search_word: String) -> i32 {
